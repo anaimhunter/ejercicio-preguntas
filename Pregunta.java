@@ -1,6 +1,6 @@
 public class Pregunta
 {
-    private String texto;
+    protected String texto;
     private String respuesta;
     
     public Pregunta()
@@ -19,12 +19,17 @@ public class Pregunta
         respuesta =Respuesta;
     }
     
-    public boolean checaRespuesta(String Respuesta)
+    public boolean checarRespuesta(String Respuesta)
     {
-        return true;
+        if(respuesta == Respuesta)
+        {
+            return true;
+        }
+        return false;
     }
+    
     public void imprimete()
     {
-        //imprime texto 
+        System.out.println(texto);
     }
 }
